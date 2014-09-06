@@ -41,4 +41,5 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Capybara::DSL
+  # this line was added in spec_helper.rb to get the test to run properly
 end
