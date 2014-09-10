@@ -1,5 +1,6 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
+  # line above gets ride of [get "users/new"] line
   match '/signup',    to: 'users#new',    via: 'get'
 
 
