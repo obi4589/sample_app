@@ -8,6 +8,8 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
 
+  resources :microposts, only: [:create, :destroy]
+
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
